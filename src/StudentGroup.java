@@ -28,6 +28,7 @@ public class StudentGroup implements StudentArrayOperation {
 	@Override
 	public Student[] getStudents() {
 		// Add your implementation here
+		//Correct
 		return students;
 	}
 
@@ -65,7 +66,20 @@ public class StudentGroup implements StudentArrayOperation {
 	public void addFirst(Student student) {
 		// Add your implementation here
 		//Still to be Reviewed
-		if (student == null ) throw new IllegalArgumentException();
+		try {
+			if(student == null)
+				throw IllegalArgumentException;
+			else
+			{
+				students.length += 1;
+				students[students.length-1] = student;
+			}
+		}
+		catch(IllegalArgumentException ie)
+		{
+			System.out.println("An Illegal Argument Exception has occured.");
+		}
+		/*if (student == null ) throw new IllegalArgumentException();
 		else {
 			ArrayList <Student>at = new ArrayList<Student>();
 			at = (ArrayList<Student>) Arrays.asList(students);
@@ -84,7 +98,7 @@ public class StudentGroup implements StudentArrayOperation {
 			for(int i=0;i<st.length;i++) {
 				students[i] = st[i];
 			}*/
-		}
+		}*/
 	}
 
 	@Override
@@ -178,7 +192,7 @@ public class StudentGroup implements StudentArrayOperation {
 		// Add your implementation here
 		Student st[] = new Student[students.length];
 		int count=0;
-		for(int i=0;i<students.length;i++) if(students[i].getBirthDate().getYear() == age) {
+		for(int i=0;i<students.length;i++) if(students[i].getBirthDate()getClass().getAge() == age) {
 			st[count] = students[i];
 			count++;
 		}
@@ -194,6 +208,7 @@ public class StudentGroup implements StudentArrayOperation {
 
 	@Override
 	public Student getNextStudent(Student student) {
+		//Correct
 		// Add your implementation here
 		if (student == null) throw new IllegalArgumentException();
 		else
