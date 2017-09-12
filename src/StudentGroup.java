@@ -1,5 +1,6 @@
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Collections;
 import java.util.Date;
 
 /**
@@ -112,6 +113,7 @@ public class StudentGroup implements StudentArrayOperation {
 	public void add(Student student, int index) {
 		// Add your implementation here
 		
+		
 	}
 
 	@Override
@@ -189,8 +191,23 @@ public class StudentGroup implements StudentArrayOperation {
 	@Override
 	public Student[] getStudentsWithMaxAvgMark() {
 		// Add your implementation here
-		
-		return null;
+		double d = 0;
+		for(int i=0;i<students.length;i++) {
+			
+			if(students[i].getAvgMark() > d) {
+				d = students[i].getAvgMark();
+			}
+		}
+		Student []st = new Student[students.length];
+		int count=0;
+		for(int i=0;i<students.length;i++) {
+			if(d == students[i].getAvgMark()) {st[count] = students[i]; count++;}
+		}
+		Student []ts = new Student[count];
+		for(int i=0;i<count;i++) {
+			ts[i] = st[i];
+		}
+		return ts;
 	}
 
 	@Override
