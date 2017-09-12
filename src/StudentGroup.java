@@ -32,7 +32,7 @@ public class StudentGroup implements StudentArrayOperation {
 	@Override
 	public void setStudents(Student[] students) {
 		// Add your implementation here
-		if (students == null) { 
+		/*if (students == null) { 
 			throw new IllegalArgumentException();
 		}
 		for(int i=0;i<students.length;i++) {
@@ -40,7 +40,7 @@ public class StudentGroup implements StudentArrayOperation {
 			students[i].setAvgMark(60+i+i/10);
 			students[i].setBirthDate(new Date());
 			students[i].setFullName("Random" + i);
-		}
+		}*/
 	}
 
 	@Override
