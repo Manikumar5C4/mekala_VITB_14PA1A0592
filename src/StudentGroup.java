@@ -39,12 +39,7 @@ public class StudentGroup implements StudentArrayOperation {
 		if (students == null) { 
 			throw new IllegalArgumentException();
 		}
-		for(int i=0;i<students.length;i++) {
-			students[i].setId(i);
-			students[i].setAvgMark(60+i+i/10);
-			students[i].setBirthDate(new Date());
-			students[i].setFullName("Random" + i);
-		}
+		else this.students = students;
 	}
 
 	@Override
