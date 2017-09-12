@@ -95,16 +95,11 @@ public class StudentGroup implements StudentArrayOperation {
 		//Still to be Reviewed
 		if (student == null ) throw new IllegalArgumentException();
 		else {
-			Student []st = new Student[students.length+1];
-			st[st.length-1] = student;
-			for(int i=st.length-2;i>=0;i--) {
-				st[i] = students[i-1];
-			}
-			students  = null;
-			Student []students = new Student[st.length];
-			for(int i=0;i<st.length;i++) {
-				students[i] = st[i];
-			}
+			ArrayList <Student>at = new ArrayList<Student>();
+			at = (ArrayList<Student>) Arrays.asList(students);
+			at.add(students.length, student);
+			students = null;
+			students = (Student[]) at.toArray();
 		}
 		
 	}
@@ -149,6 +144,7 @@ public class StudentGroup implements StudentArrayOperation {
 	@Override
 	public void bubbleSort() {
 		// Add your implementation here
+		Arrays.sort(students);
 	}
 
 	@Override
