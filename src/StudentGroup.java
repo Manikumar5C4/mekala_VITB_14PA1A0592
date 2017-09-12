@@ -151,6 +151,7 @@ public class StudentGroup implements StudentArrayOperation {
 	@Override
 	public Student[] getByBirthDate(Date date) {
 		// Add your implementation here
+		
 		return null;
 	}
 
@@ -181,12 +182,18 @@ public class StudentGroup implements StudentArrayOperation {
 	@Override
 	public Student[] getStudentsWithMaxAvgMark() {
 		// Add your implementation here
+		
 		return null;
 	}
 
 	@Override
 	public Student getNextStudent(Student student) {
 		// Add your implementation here
+		if (student == null) throw new IllegalArgumentException();
+		else
+		for(int i=0;i<students.length;i++) {
+			if(student.getId() == students[i].getId()) return students[i+1];
+		}
 		return null;
 	}
 }
