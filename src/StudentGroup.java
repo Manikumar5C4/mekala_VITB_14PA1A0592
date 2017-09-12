@@ -185,7 +185,7 @@ public class StudentGroup implements StudentArrayOperation {
 			st[count] = students[i];
 			count++;
 		}*/
-		return st;
+		return null;
 	}
 
 	@Override
