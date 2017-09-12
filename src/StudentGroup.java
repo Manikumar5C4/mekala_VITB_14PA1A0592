@@ -207,7 +207,7 @@ public class StudentGroup implements StudentArrayOperation {
 		for(int i=0;i<count;i++) {
 			ts[i] = st[i];
 		}
-		return null;
+		return ts;
 	}
 
 	@Override
