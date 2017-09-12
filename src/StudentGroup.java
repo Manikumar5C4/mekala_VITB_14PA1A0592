@@ -32,49 +32,22 @@ public class StudentGroup implements StudentArrayOperation {
 	@Override
 	public void setStudents(Student[] students) {
 		// Add your implementation here
-		/*if (students == null) { 
-			throw new IllegalArgumentException();
-		}
-		for(int i=0;i<students.length;i++) {
-			students[i].setId(i);
-			students[i].setAvgMark(60+i+i/10);
-			students[i].setBirthDate(new Date());
-			students[i].setFullName("Random" + i);
-		}*/
 	}
 
 	@Override
 	public Student getStudent(int index) {
 		// Add your implementation here
-		/*if(index < 0 || index >= students.length) throw new IllegalArgumentException();
-		else return students[index];*/
+		return null;
 	}
 
 	@Override
 	public void setStudent(Student student, int index) {
 		// Add your implementation here
-		/*if(index < 0 || index >= students.length) throw new IllegalArgumentException();
-		else {
-			students[index] = student;
-		}*/
 	}
-	
+
 	@Override
 	public void addFirst(Student student) {
 		// Add your implementation here
-		/*if (student == null ) throw new IllegalArgumentException();
-		else {
-			Student []st = new Student[students.length+1];
-			st[0] = student;
-			for(int i=1;i<st.length;i++) {
-				st[i] = students[i-1];
-			}
-			students  = null;
-			Student []students = new Student[st.length];
-			for(int i=0;i<st.length;i++) {
-				students[i] = st[i];
-			}
-		}*/
 	}
 
 	@Override
