@@ -176,7 +176,13 @@ public class StudentGroup implements StudentArrayOperation {
 	@Override
 	public Student[] getStudentsByAge(int age) {
 		// Add your implementation here
-		return null;
+		Student st[] = new Student[students.length];
+		int count=0;
+		for(int i=0;i<students.length;i++) if(students[i].getBirthDate().getYear() == age) {
+			st[count] = students[i];
+			count++;
+		}
+		return st;
 	}
 
 	@Override
