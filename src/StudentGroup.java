@@ -80,6 +80,20 @@ public class StudentGroup implements StudentArrayOperation {
 	@Override
 	public void addLast(Student student) {
 		// Add your implementation here
+		if (student == null ) throw new IllegalArgumentException();
+		else {
+			Student []st = new Student[students.length+1];
+			st[st.length-1] = student;
+			for(int i=st.length-2;i>=0;i--) {
+				st[i] = students[i-1];
+			}
+			students  = null;
+			Student []students = new Student[st.length];
+			for(int i=0;i<st.length;i++) {
+				students[i] = st[i];
+			}
+		}
+		
 	}
 
 	@Override
