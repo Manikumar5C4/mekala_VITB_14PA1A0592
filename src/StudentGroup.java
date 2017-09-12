@@ -179,19 +179,19 @@ public class StudentGroup implements StudentArrayOperation {
 	@Override
 	public Student[] getStudentsByAge(int age) {
 		// Add your implementation here
-		Student st[] = new Student[students.length];
+		/*Student st[] = new Student[students.length];
 		int count=0;
 		for(int i=0;i<students.length;i++) if(students[i].getBirthDate()getClass().getAge() == age) {
 			st[count] = students[i];
 			count++;
-		}
+		}*/
 		return st;
 	}
 
 	@Override
 	public Student[] getStudentsWithMaxAvgMark() {
 		// Add your implementation here
-		/*double d = 0;
+		double d = 0;
 		for(int i=0;i<students.length;i++) {
 			
 			if(students[i].getAvgMark() > d) {
@@ -206,7 +206,7 @@ public class StudentGroup implements StudentArrayOperation {
 		Student []ts = new Student[count];
 		for(int i=0;i<count;i++) {
 			ts[i] = st[i];
-		}*/
+		}
 		return null;
 	}
 
