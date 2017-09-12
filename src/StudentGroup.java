@@ -66,20 +66,7 @@ public class StudentGroup implements StudentArrayOperation {
 	public void addFirst(Student student) {
 		// Add your implementation here
 		//Still to be Reviewed
-		try {
-			if(student == null)
-				throw IllegalArgumentException;
-			else
-			{
-				students.length += 1;
-				students[students.length-1] = student;
-			}
-		}
-		catch(IllegalArgumentException ie)
-		{
-			System.out.println("An Illegal Argument Exception has occured.");
-		}
-		/*if (student == null ) throw new IllegalArgumentException();
+		if (student == null ) throw new IllegalArgumentException();
 		else {
 			ArrayList <Student>at = new ArrayList<Student>();
 			at = (ArrayList<Student>) Arrays.asList(students);
@@ -98,7 +85,7 @@ public class StudentGroup implements StudentArrayOperation {
 			for(int i=0;i<st.length;i++) {
 				students[i] = st[i];
 			}*/
-		}*/
+		}
 	}
 
 	@Override
